@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".createAcc"
+    android:background="@drawable/bgcreateacc">
+
+    <EditText
+        android:id="@+id/etEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="207dp"
+        android:background="@null"
+        android:ems="10"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="246dp"
+        android:layout_height="47dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="193dp"
+        android:background="@drawable/btntrasnparent" />
+
+    <EditText
+        android:id="@+id/etPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/etEmail"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="-1dp"
+        android:layout_marginTop="266dp"
+        android:background="@null"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPersonName"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF" />
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="246dp"
+        android:layout_height="47dp"
+        android:layout_below="@+id/imageView8"
+        android:layout_alignStart="@+id/imageView8"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/btntrasnparent" />
+
+    <EditText
+        android:id="@+id/etCPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/etEmail"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="-3dp"
+        android:layout_marginTop="319dp"
+        android:background="@null"
+        android:ems="10"
+        android:hint="Confirm Password"
+        android:inputType="textPersonName"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF" />
+
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="246dp"
+        android:layout_height="47dp"
+        android:layout_alignStart="@+id/imageView9"
+        android:layout_centerVertical="true"
+        android:background="@drawable/btntrasnparent" />
+
+    <EditText
+        android:id="@+id/uname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/etEmail"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="379dp"
+        android:background="@null"
+        android:ems="10"
+        android:hint="Username Instagram"
+        android:inputType="textPersonName"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF" />
+
+    <ImageView
+        android:id="@+id/imageView11"
+        android:layout_width="246dp"
+        android:layout_height="47dp"
+        android:layout_below="@+id/imageView10"
+        android:layout_alignStart="@+id/imageView8"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="13dp"
+        android:background="@drawable/btntrasnparent" />
+
+    <EditText
+        android:id="@+id/pass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="201dp"
+        android:background="@null"
+        android:ems="10"
+        android:hint="Password Instagram"
+        android:inputType="textPersonName"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF" />
+
+    <ImageView
+        android:id="@+id/imageView12"
+        android:layout_width="246dp"
+        android:layout_height="47dp"
+        android:layout_alignStart="@+id/imageView8"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginBottom="188dp"
+        android:background="@drawable/btntrasnparent" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="246dp"
+        android:layout_height="47dp"
+        android:layout_alignStart="@+id/etCPassword"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="-12dp"
+        android:layout_marginBottom="130dp"
+        android:background="@drawable/btnsign" />
+
+    <Button
+        android:id="@+id/btnBack"
+        android:layout_width="31dp"
+        android:layout_height="24dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/arrow" />
+
+
+
+</RelativeLayout>

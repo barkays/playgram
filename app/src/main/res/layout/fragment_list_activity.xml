@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/grey"
+    tools:context=".ScheduleActivity">
+
+    <ImageView
+        android:id="@+id/imageView14"
+        android:layout_width="393dp"
+        android:layout_height="84dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="44dp"
+        android:src="@drawable/whiterounded" />
+
+    <TextView
+        android:id="@+id/previewDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/imageView14"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="17dp"
+        android:text="06 Januari 2019"
+        android:textSize="8pt"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/previewImage
+"
+        android:layout_width="54dp"
+        android:layout_height="53dp"
+        android:layout_alignTop="@+id/imageView14"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="29dp"
+        android:layout_marginTop="15dp"
+        android:contentDescription="TODO"
+        android:src="@drawable/postingan" />
+
+    <TextView
+        android:id="@+id/previewTime"
+        android:layout_width="76dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/previewImage
+"
+        android:layout_alignEnd="@+id/previewDate"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="-32dp"
+        android:textSize="7pt"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/previewCaption"
+        android:layout_width="277dp"
+        android:layout_height="44dp"
+        android:layout_below="@+id/previewTime"
+        android:layout_alignStart="@+id/previewTime"
+        android:layout_marginTop="0dp" />
+
+</RelativeLayout>

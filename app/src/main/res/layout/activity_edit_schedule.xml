@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="#FAFAFA"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+    <Button
+        android:id="@+id/btnTag"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="111dp"
+        android:background="#FFFFFF"
+        android:text="      Tag People"
+        android:textAlignment="viewStart"
+        android:textAllCaps="false"
+        android:textSize="8pt"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/btnAddLocation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="115dp"
+        android:background="#FFFFFF"
+        android:text="      Add Location"
+        android:textAlignment="viewStart"
+        android:textAllCaps="false"
+        android:textSize="8pt"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/btnPostTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnAddLocation"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="1dp"
+        android:background="#FFFFFF"
+        android:text="      Post Time"
+        android:textAlignment="viewStart"
+        android:textAllCaps="false"
+        android:textSize="8pt"
+        tools:ignore="HardcodedText,NotSibling" />
+
+    <Button
+        android:id="@+id/btnDeleteTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginBottom="352dp"
+        android:background="#FFFFFF"
+        android:text="      Delete Time"
+        android:textAlignment="viewStart"
+        android:textAllCaps="false"
+        android:textSize="8pt"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/previewDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="54dp"
+        android:layout_marginTop="12dp"
+        android:text="Edit Post"
+        android:textSize="8pt"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/tvEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/previewDate"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="-1dp"
+        android:layout_marginEnd="19dp"
+        android:textColor="@color/purple"
+        android:text="Save"
+        android:textSize="8pt"
+        tools:ignore="HardcodedText" />
+
+    <EditText
+        android:id="@+id/etCaption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/previewDate"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="38dp"
+        android:layout_marginTop="68dp"
+        android:background="@null"
+        android:ems="10"
+        android:hint="Write a caption..."
+        android:inputType="textPersonName"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/previewCaption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginBottom="309dp"
+        android:text="Share To"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:textSize="8pt"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/previewCaption"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginBottom="270dp"
+        android:text="Facebook"
+        android:textColor="#000000"
+        android:textSize="8pt"
+        tools:ignore="HardcodedText" />
+
+    <Switch
+        android:id="@+id/switch1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textView4"
+        android:layout_alignEnd="@+id/tvEdit" />
+
+    <Button
+        android:id="@+id/back"
+        android:layout_width="31dp"
+        android:layout_height="24dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/arrow2" />
+
+    <ImageView
+        android:id="@+id/pictProfile"
+        android:layout_width="95dp"
+        android:layout_height="45dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="56dp"
+        app:srcCompat="@drawable/profile" />
+
+    <ImageView
+        android:id="@+id/pictPostingan"
+        android:layout_width="47dp"
+        android:layout_height="50dp"
+        android:layout_alignEnd="@+id/switch1"
+        android:layout_alignBottom="@+id/pictProfile"
+        app:srcCompat="@drawable/postingan" />
+
+    <ImageView
+        android:id="@+id/imageView13"
+        android:layout_width="match_parent"
+        android:layout_height="199dp"
+        android:layout_alignTop="@+id/buttonTagPeople"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="-2dp"
+        android:layout_marginBottom="350dp"
+        android:src="@color/grey"/>
+
+    <Button
+        android:id="@+id/btnDelete"
+        android:layout_width="245dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="82dp"
+        android:layout_marginBottom="184dp"
+        android:text="Delete Schedule"
+        android:textSize="8pt" />
+
+</RelativeLayout>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey">
+  <!--  tools:context=".TabView"-->
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <Button
+        android:id="@+id/buttonAdd"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/add"
+        android:onClick="posting"/>
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="375dp"
+        android:layout_height="302dp"
+        android:layout_above="@+id/buttonAdd"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="22dp"
+        android:src="@drawable/syip" />
+
+
+</RelativeLayout>
