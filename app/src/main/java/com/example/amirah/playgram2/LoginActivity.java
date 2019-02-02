@@ -20,7 +20,7 @@ public class LoginActivity extends Activity {
     }
 
     public void loginPg(View view) {
-        Intent intent = new Intent(LoginActivity.this,loginPlaygram.class);
+        Intent intent = new Intent(LoginActivity.this,LoginPlaygram.class);
 
         startActivity(intent);
     }

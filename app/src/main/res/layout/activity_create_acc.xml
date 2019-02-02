@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".createAcc"
+    tools:context=".CreateAccount"
     android:background="@drawable/bgcreateacc">
 
     <EditText
@@ -128,14 +128,16 @@
         android:background="@drawable/btntrasnparent" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/buttonSignUp"
         android:layout_width="246dp"
         android:layout_height="47dp"
         android:layout_alignStart="@+id/etCPassword"
         android:layout_alignParentBottom="true"
         android:layout_marginStart="-12dp"
         android:layout_marginBottom="130dp"
-        android:background="@drawable/btnsign" />
+        android:background="@drawable/btnsign"
+        android:onClick="signUpPlaygram"
+        tools:ignore="OnClick" />
 
     <Button
         android:id="@+id/btnBack"

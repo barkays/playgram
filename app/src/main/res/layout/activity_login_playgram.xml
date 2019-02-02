@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".loginPlaygram"
+    tools:context=".LoginPlaygram"
     android:background="@drawable/bgloginpg">
 
     <EditText
@@ -60,7 +60,9 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="261dp"
-        android:background="@drawable/btnlogin" />
+        android:background="@drawable/btnlogin"
+        android:onClick="doLoginPg"
+        tools:ignore="OnClick" />
 
     <Button
         android:id="@+id/btnCreateAcc"

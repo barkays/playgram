@@ -1,10 +1,10 @@
 package com.example.amirah.playgram2;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
-
-import com.example.amirah.playgram2.service.PostingService;
 
 public class SplashActivity extends Activity {
 
@@ -13,6 +13,9 @@ public class SplashActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
 
+        SharedPreferences sharedPreferences = getSharedPreferences(getString(R.string.credential_file_key), Context.MODE_PRIVATE);
+        final boolean isLoggedIn = sharedPreferences.getBoolean("logged_in", false);
+        final boolean firstTimeUse = sharedPreferences.getBoolean("first_time_use", true);
         Thread thread = new Thread(){
             public void run(){
             try{
@@ -20,7 +23,13 @@ public class SplashActivity extends Activity {
             } catch (InterruptedException e){
                 e.printStackTrace();
             } finally {
-                startActivity(new Intent(SplashActivity.this, MainActivity.class));
+                if (isLoggedIn){
+                    startActivity(new Intent(SplashActivity.this, TabView.class));
+                } else if (!firstTimeUse){
+                    startActivity(new Intent(SplashActivity.this, LoginActivity.class));
+                } else {
+                    startActivity(new Intent(SplashActivity.this, MainActivity.class));
+                }
             }
             }
         };

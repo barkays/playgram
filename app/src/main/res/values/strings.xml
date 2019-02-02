@@ -16,12 +16,16 @@
     <string name="username_edit_text">Username</string>
     <string name="password_edit_text">Password</string>
     <string name="login_text">Login</string>
-    <string name="ig_username">ig_username</string>
-    <string name="ig_password">ig_password</string>
     <string name="credential_file_key">qwerty</string>
     <string name="loginfailed">Login Failed\'\'\'</string>
     <string name="loginsuccess">Login Success\'\'\'</string>
     <string name="login">Login\'\'</string>
+
+    <string name="ig_username">ig_username</string>
+    <string name="ig_password">ig_password</string>
+    <string name="pg_email">pg_email</string>
+    <string name="pg_password">pg_password</string>
+
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

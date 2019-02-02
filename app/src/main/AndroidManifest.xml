@@ -20,8 +20,15 @@
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning"
         tools:replace="android:allowBackup">
+
+        <receiver
+            android:name=".PostingReceiver"
+            android:process=":remote" />
+
         <service android:name=".service.PostingService"
-            android:enabled="true" />
+            android:exported="false" />
+
+
         <activity android:name=".TabView" />
         <activity android:name=".SplashActivity">
             <intent-filter>
@@ -33,9 +40,9 @@
         <activity android:name=".MainActivity" />
         <activity android:name=".LoginActivity" />
         <activity android:name=".LoginInstagram" />
-        <activity android:name=".loginPlaygram" />
+        <activity android:name=".LoginPlaygram" />
         <activity android:name=".ScheduleActivity" />
-        <activity android:name=".createAcc" />
+        <activity android:name=".CreateAccount" />
         <activity android:name=".AddSchedule" />
         <activity android:name=".EditSchedule" />
     </application>

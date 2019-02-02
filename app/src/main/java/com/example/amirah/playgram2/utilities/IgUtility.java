@@ -13,11 +13,19 @@ public class IgUtility implements Serializable {
     private static volatile IgUtility INSTANCE;
 
     public static IgUtility getObject(String email, String password) {
-        if (INSTANCE == null) {
-            synchronized (IgUtility.class) {
-                if (INSTANCE == null)
-                    INSTANCE = new IgUtility(email, password);
+        try {
+            if (INSTANCE == null) {
+                synchronized (IgUtility.class) {
+                    if (INSTANCE == null) {
+                        INSTANCE = new IgUtility(email, password);
+                        INSTANCE.login();
+                    }
+                    if(!INSTANCE.isLoggedIn())
+                        INSTANCE = null;
+                }
             }
+        }catch (IOException e){
+            e.printStackTrace();
         }
         return INSTANCE;
     }
@@ -35,8 +43,6 @@ public class IgUtility implements Serializable {
         return instagramClient.isLoggedIn();
     }
 
-    public void setup() {
-    }
 
     public void login() throws IOException {
         instagramClient = Instagram4Android.builder().username(username).password(password).build();

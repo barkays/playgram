@@ -2,9 +2,12 @@ package com.example.amirah.playgram2;
 
 import android.annotation.TargetApi;
 import android.app.Activity;
+import android.app.ActivityManager;
 import android.arch.lifecycle.Observer;
 import android.arch.lifecycle.ViewModelProviders;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -12,11 +15,14 @@ import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.View;
+import android.widget.TextView;
 
 import com.example.amirah.playgram2.adapter.PostinganListAdapter;
 import com.example.amirah.playgram2.entity.Postingan;
 import com.example.amirah.playgram2.model.PostinganViewModel;
+import com.example.amirah.playgram2.service.PostingService;
 
 import java.sql.Timestamp;
 import java.util.List;
@@ -27,11 +33,25 @@ public class TabView extends AppCompatActivity {
     public static final int READ_EXTERNAL_STORAGE_REQUEST_PERMISSION = 200;
     public static final int NEW_POSTINGAN_ACTIVITY_REQUEST_CODE = 1;
     private PostinganViewModel mPostinganViewModel;
+    private SharedPreferences sharedPreferences;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tab_view);
+
+        sharedPreferences = getSharedPreferences(getString(R.string.credential_file_key), Context.MODE_PRIVATE);
+
+        PostingService mPostingService = new PostingService();
+        Intent mServiceIntent = new Intent(getApplicationContext(), mPostingService.getClass());
+
+        if (!isServicesRunning(mPostingService.getClass())) {
+            startService(mServiceIntent);
+        }
+
+        String loginUsername = sharedPreferences.getString(getString(R.string.ig_username), "");
+        TextView usernameText = findViewById(R.id.textUsernameTabView);
+        usernameText.setText(loginUsername);
 
         RecyclerView recyclerView = findViewById(R.id.recyclerView);
         final PostinganListAdapter adapter = new PostinganListAdapter(this);
@@ -69,4 +89,20 @@ public class TabView extends AppCompatActivity {
         startActivityForResult(intent, TabView.NEW_POSTINGAN_ACTIVITY_REQUEST_CODE);
     }
 
+    private boolean isServicesRunning(Class<? extends PostingService> serviceClass) {
+        ActivityManager manager = (ActivityManager) getSystemService(Context.ACTIVITY_SERVICE);
+        for (ActivityManager.RunningServiceInfo service : manager.getRunningServices(Integer.MAX_VALUE)) {
+            if (serviceClass.getName().equals(service.service.getClassName())) {
+                Log.i ("isMyServiceRunning?", true+"");
+                return true;
+            }
+        }
+        Log.i ("isMyServiceRunning?", false+"");
+        return false;
+    }
+
+    public void logout(View view) {
+        sharedPreferences.edit().clear().apply();
+        finish();
+    }
 }
